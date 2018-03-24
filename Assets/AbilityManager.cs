@@ -18,7 +18,8 @@ public class AbilityManager : MonoBehaviour {
             
             if (abilities[0].GetComponentInChildren<CooldownTimer>().canUse == true)
             {
-                abilities[0].GetComponentInChildren<CooldownTimer>().startCoolDown();
+                abilities[0].GetComponentInChildren<SkillUseQ>().QUse();
+                //abilities[0].GetComponentInChildren<CooldownTimer>().startCoolDown();
                 Debug.Log("q ability used");
             }
             else {
