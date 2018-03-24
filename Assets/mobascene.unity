@@ -1633,6 +1633,7 @@ MonoBehaviour:
   maxDistance: 30
   startPos: {x: 0, y: 0, z: 0}
   startTime: 0
+  desPos: {x: 0, y: 0, z: 0}
   prefabAttackCude: {fileID: 1534709300741072, guid: 5a56429035ba950459434a4190b26f3d,
     type: 2}
   cubeManTransform: {fileID: 2059073591}
@@ -14657,6 +14658,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1200551071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1200551072}
+  - component: {fileID: 1200551074}
+  - component: {fileID: 1200551073}
+  m_Layer: 5
+  m_Name: SkillUse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1200551072
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200551071}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -124.6985, y: 0.000026653852, z: 0.00024497395}
+  m_LocalScale: {x: 1.000095, y: 1.0000954, z: 1.0000954}
+  m_Children: []
+  m_Father: {fileID: 1566535456}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1200551073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200551071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0335067aeabb65548ab574fdc8b90625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  prefabShield: {fileID: 1048888439915196, guid: ee81de594c36d1b4fa297cf1d44f25e1,
+    type: 2}
+  lastingTime: 3
+  startTime: 0
+  cubeManTransform: {fileID: 2059073591}
+  shield: {fileID: 0}
+--- !u!33 &1200551074
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200551071}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1207938572
 GameObject:
   m_ObjectHideFlags: 0
@@ -16046,6 +16102,7 @@ RectTransform:
   - {fileID: 1794484774}
   - {fileID: 467292588}
   - {fileID: 472362104}
+  - {fileID: 1200551072}
   m_Father: {fileID: 41552237}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

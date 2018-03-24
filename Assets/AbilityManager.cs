@@ -30,6 +30,7 @@ public class AbilityManager : MonoBehaviour {
         {
             if (abilities[1].GetComponentInChildren<CooldownTimer>().canUse == true)
             {
+                abilities[1].GetComponentInChildren<SkillUseSpace>().SpaceUse();
                 abilities[1].GetComponentInChildren<CooldownTimer>().startCoolDown();
                 Debug.Log("Space ability used");
             }
