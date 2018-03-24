@@ -43,6 +43,7 @@ public class AbilityManager : MonoBehaviour {
         {
             if (abilities[2].GetComponentInChildren<CooldownTimer>().canUse == true)
             {
+                abilities[2].GetComponentInChildren<SkillUseE>().EUse();
                 abilities[2].GetComponentInChildren<CooldownTimer>().startCoolDown();
                 Debug.Log("E ability used");
             }

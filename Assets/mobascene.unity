@@ -1444,6 +1444,60 @@ Transform:
   m_Father: {fileID: 1580665458}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &427484897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 427484898}
+  - component: {fileID: 427484900}
+  - component: {fileID: 427484899}
+  m_Layer: 5
+  m_Name: SkillUse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &427484898
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 427484897}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -254.81863, y: 0.000040444902, z: 0.00024497395}
+  m_LocalScale: {x: 1.000095, y: 1.0000954, z: 1.0000954}
+  m_Children: []
+  m_Father: {fileID: 474424790}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &427484899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 427484897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f207b69ef81c9c44a931b1722e9ae3c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  speed: 60
+  maxDistance: 20
+  desPos: {x: 0, y: 0, z: 0}
+  startPos: {x: 0, y: 0, z: 0}
+  cubeManTransform: {fileID: 2059073591}
+--- !u!33 &427484900
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 427484897}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &443823760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,6 +1893,7 @@ RectTransform:
   - {fileID: 1258581331}
   - {fileID: 500939547}
   - {fileID: 972669856}
+  - {fileID: 427484898}
   m_Father: {fileID: 41552237}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18196,6 +18251,7 @@ MonoBehaviour:
   maxSpeed: 0
   target: {x: 0, y: 0, z: 0}
   targetBullet: {x: 0, y: 0, z: 0}
+  ESkill: {fileID: 427484899}
 --- !u!95 &2059073593
 Animator:
   serializedVersion: 3
