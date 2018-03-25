@@ -19,6 +19,8 @@ public class WasdMovement : MonoBehaviour
     float localDirectionX;
     Vector3 lastPosition;
 
+    public SkillUseE ESkill;
+
 
     // Use this for initialization
     void Start()
@@ -78,8 +80,8 @@ public class WasdMovement : MonoBehaviour
         _animator.SetFloat("velX", localDirectionX);
         _animator.SetFloat("velY", localDirectionZ);
 
-
-        transform.Translate(maxSpeed * Input.GetAxis("Horizontal") * Time.deltaTime * -1, 0f, maxSpeed * Input.GetAxis("Vertical") * Time.deltaTime * -1, Space.World);
+        if(!ESkill.activated)
+            transform.Translate(maxSpeed * Input.GetAxis("Horizontal") * Time.deltaTime * -1, 0f, maxSpeed * Input.GetAxis("Vertical") * Time.deltaTime * -1, Space.World);
 
     }
 

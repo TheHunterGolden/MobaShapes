@@ -18,14 +18,14 @@ public class CooldownTimer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (float.Parse(gameObject.GetComponent<Text>().text) > 0)
+        if (gameObject.GetComponent<Text>().text != "" && float.Parse(gameObject.GetComponent<Text>().text) > 0)
         {
             
             gameObject.GetComponent<Text>().text = (float.Parse(gameObject.GetComponent<Text>().text) - Time.deltaTime).ToString();
             
         }
       
-        if (float.Parse(gameObject.GetComponent<Text>().text) <= 0)
+        if (gameObject.GetComponent<Text>().text != "" &&  float.Parse(gameObject.GetComponent<Text>().text) <= 0)
         {
             gameObject.GetComponent<Text>().text = "";
             canUse = true;
