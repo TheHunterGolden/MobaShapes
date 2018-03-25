@@ -56,6 +56,7 @@ public class AbilityManager : MonoBehaviour {
         {
             if (abilities[3].GetComponentInChildren<CooldownTimer>().canUse == true)
             {
+                abilities[3].GetComponentInChildren<SkillUseR>().RUse();
                 abilities[3].GetComponentInChildren<CooldownTimer>().startCoolDown();
                 Debug.Log("R ability used");
             }

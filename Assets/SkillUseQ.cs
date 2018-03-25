@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SkillUseQ : MonoBehaviour {
     public bool activated;
     public bool back;
+    public bool isR;
     public float lastingTime;
     public float speed;
     public float maxDistance;
@@ -15,15 +16,18 @@ public class SkillUseQ : MonoBehaviour {
     public GameObject prefabAttackCude;
     public Transform cubeManTransform;
     public GameObject attackCude;
-    public GameObject cdTimer;
+    public GameObject qCdTimer;
+    public GameObject rCdTimer;
+    public SkillUseR rSkill;
     
 	void Start () {
         activated = false;
         back = false;
+        isR = false;
 	}
 	
 	void Update () {
-        if (activated)
+        if (activated && !rSkill.activated)
         {
             float diff = Vector3.Distance(startPos, attackCude.transform.localPosition);
 
@@ -37,9 +41,9 @@ public class SkillUseQ : MonoBehaviour {
                 Destroy(attackCude);
                 activated = false;
 
-                float remainingTime = cdTimer.GetComponent<CooldownTimer>().cooldown - lastingTime;
-                cdTimer.GetComponent<Text>().text = remainingTime.ToString();
-                cdTimer.GetComponent<CooldownTimer>().canUse = false;
+                float remainingTime = qCdTimer.GetComponent<CooldownTimer>().cooldown - lastingTime;
+                qCdTimer.GetComponent<Text>().text = remainingTime.ToString();
+                qCdTimer.GetComponent<CooldownTimer>().canUse = false;
             }
         }
         if (back)
@@ -71,15 +75,29 @@ public class SkillUseQ : MonoBehaviour {
             }
 
             activated = true;
+
+            float remainingTime = qCdTimer.GetComponent<CooldownTimer>().cooldown;
+            rCdTimer.GetComponent<Text>().text = remainingTime.ToString();
+            rCdTimer.GetComponent<CooldownTimer>().canUse = false;
         }
         else if (activated)
         {
-            back = true;
-            activated = false;
+            if (isR)
+            {
+                rSkill.back = true;
+                rSkill.activated = false;
+                activated = false;
+                isR = false;
+            }
+            else
+            {
+                back = true;
+                activated = false;
+            }
 
-            float remainingTime = cdTimer.GetComponent<CooldownTimer>().cooldown - (Time.time - startTime);
-            cdTimer.GetComponent<Text>().text = remainingTime.ToString();
-            cdTimer.GetComponent<CooldownTimer>().canUse = false;
+            float remainingTime = qCdTimer.GetComponent<CooldownTimer>().cooldown - (Time.time - startTime);
+            qCdTimer.GetComponent<Text>().text = remainingTime.ToString();
+            qCdTimer.GetComponent<CooldownTimer>().canUse = false;
         }
     }
 }

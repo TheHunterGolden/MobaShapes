@@ -532,6 +532,66 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48248330}
   m_Mesh: {fileID: 4300000, guid: b7a23aef7ea122d498f42bf9a04098bb, type: 3}
+--- !u!1 &117203166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 117203167}
+  - component: {fileID: 117203169}
+  - component: {fileID: 117203168}
+  m_Layer: 5
+  m_Name: SkillUse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &117203167
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117203166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -382.61517, y: 0.0000510534, z: 0.00024497395}
+  m_LocalScale: {x: 1.000095, y: 1.0000954, z: 1.0000954}
+  m_Children: []
+  m_Father: {fileID: 1374873122}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &117203168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117203166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce30df759874d14ebea28df277432b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  back: 0
+  lastingTime: 3
+  speed: 30
+  distance: 20
+  startTime: 0
+  prefabAttackCude: {fileID: 1534709300741072, guid: 5a56429035ba950459434a4190b26f3d,
+    type: 2}
+  cubeManTransform: {fileID: 2059073591}
+  attackCude: []
+  qCdTimer: {fileID: 1793631123}
+  qSkill: {fileID: 459525022}
+--- !u!33 &117203169
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117203166}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &124872188
 Prefab:
   m_ObjectHideFlags: 0
@@ -1682,6 +1742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   back: 0
+  isR: 0
   lastingTime: 3
   speed: 50
   maxDistance: 30
@@ -1692,7 +1753,9 @@ MonoBehaviour:
     type: 2}
   cubeManTransform: {fileID: 2059073591}
   attackCude: {fileID: 0}
-  cdTimer: {fileID: 1793631123}
+  qCdTimer: {fileID: 1793631123}
+  rCdTimer: {fileID: 739394417}
+  rSkill: {fileID: 117203168}
 --- !u!33 &459525023
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3098,7 +3161,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1304436500
+  randomSeed: 1132990097
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6618,7 +6681,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1659483475
+  randomSeed: 2091805295
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11434,7 +11497,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 557269394
+  randomSeed: -2142765099
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -15497,6 +15560,7 @@ RectTransform:
   - {fileID: 842946973}
   - {fileID: 313697548}
   - {fileID: 739394418}
+  - {fileID: 117203167}
   m_Father: {fileID: 41552237}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
