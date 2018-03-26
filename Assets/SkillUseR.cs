@@ -34,6 +34,7 @@ public class SkillUseR : MonoBehaviour {
                 Destroy(attackCude[2]);
                 Destroy(attackCude[3]);
                 activated = false;
+                qSkill.isR = false;
             }
         }
         if (back)
@@ -72,7 +73,6 @@ public class SkillUseR : MonoBehaviour {
             startTime = Time.time;
 
             activated = true;
-            qSkill.activated = true;
             qSkill.isR = true;
         }
     }

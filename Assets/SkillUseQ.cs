@@ -60,7 +60,7 @@ public class SkillUseQ : MonoBehaviour {
 
     public void QUse()
     {
-        if (!activated)
+        if (!activated && !isR)
         {
             attackCude = Instantiate(prefabAttackCude, cubeManTransform);
             attackCude.transform.parent = null;
@@ -75,29 +75,21 @@ public class SkillUseQ : MonoBehaviour {
             }
 
             activated = true;
-
-            float remainingTime = qCdTimer.GetComponent<CooldownTimer>().cooldown;
-            rCdTimer.GetComponent<Text>().text = remainingTime.ToString();
-            rCdTimer.GetComponent<CooldownTimer>().canUse = false;
         }
         else if (activated)
         {
-            if (isR)
-            {
-                rSkill.back = true;
-                rSkill.activated = false;
-                activated = false;
-                isR = false;
-            }
-            else
-            {
-                back = true;
-                activated = false;
-            }
-
+            back = true;
+            activated = false;
             float remainingTime = qCdTimer.GetComponent<CooldownTimer>().cooldown - (Time.time - startTime);
             qCdTimer.GetComponent<Text>().text = remainingTime.ToString();
             qCdTimer.GetComponent<CooldownTimer>().canUse = false;
+        }
+
+        if (isR)
+        {
+            rSkill.back = true;
+            rSkill.activated = false;
+            isR = false;
         }
     }
 }
