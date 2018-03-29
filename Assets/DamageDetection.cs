@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DamageDetection : MonoBehaviour {
     public Animator enemyAnimator;
@@ -13,8 +14,8 @@ public class DamageDetection : MonoBehaviour {
         {
             GetComponent<SphereCollider>().enabled = false;
             GetComponent<CapsuleCollider>().enabled = false;
-            //GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationZ;
             GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<NavMeshAgent>().speed = 0f;
             enemyAnimator.SetBool("Attacked", true);
         }
     }
