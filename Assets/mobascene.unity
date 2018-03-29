@@ -583,7 +583,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -19495,6 +19495,7 @@ GameObject:
   - component: {fileID: 2059073590}
   - component: {fileID: 2059073594}
   - component: {fileID: 2059073595}
+  - component: {fileID: 2059073596}
   m_Layer: 0
   m_Name: SquarePerson
   m_TagString: square
@@ -19596,6 +19597,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.298592, y: 3.8584642, z: 1.9580457}
   m_Center: {x: 0.11358523, y: 1.9503975, z: -0.031598687}
+--- !u!114 &2059073596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2059073589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e844dfc53eef24db9b84b73e8e72b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 375629649}
 --- !u!4 &2064921522 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 5af706e146f349c4daa2e851f0d7d9a3, type: 3}

@@ -25,7 +25,6 @@ public class BulletShoot : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("hit");
-        //direction = Vector3.Reflect(direction, collision.contacts[0].normal);
+        direction = Vector3.Reflect(direction, collision.contacts[0].normal).normalized;
     }
 }
