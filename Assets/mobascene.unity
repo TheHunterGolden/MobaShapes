@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 12317389}
   - component: {fileID: 12317388}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,13 +461,13 @@ GameObject:
   - component: {fileID: 57946377}
   - component: {fileID: 57946376}
   - component: {fileID: 57946375}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Spheretic (11)
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &57946375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 75773255}
   - component: {fileID: 75773254}
   - component: {fileID: 75773260}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Spheretic (2)
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -1485,7 +1485,7 @@ GameObject:
   - component: {fileID: 140898484}
   - component: {fileID: 140898483}
   - component: {fileID: 140898482}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Spheretic (10)
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -1822,13 +1822,13 @@ GameObject:
   - component: {fileID: 160640301}
   - component: {fileID: 160640300}
   - component: {fileID: 160640299}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Spheretic (12)
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &160640299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10610,13 +10610,13 @@ GameObject:
   - component: {fileID: 780956973}
   - component: {fileID: 780956972}
   - component: {fileID: 780956971}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Spheretic (7)
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &780956971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12627,7 +12627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988115718}
   - component: {fileID: 988115719}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12794,51 +12794,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13019,7 +13019,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1023561150}
   - component: {fileID: 1023561149}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13359,51 +13359,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13790,51 +13790,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14048,51 +14048,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14254,7 +14254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108943921}
   - component: {fileID: 1108943920}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14595,13 +14595,13 @@ GameObject:
   - component: {fileID: 1160471525}
   - component: {fileID: 1160471524}
   - component: {fileID: 1160471523}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Spheretic (8)
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1160471523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15930,51 +15930,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17160,7 +17160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1370269226}
   - component: {fileID: 1370269225}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17842,51 +17842,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19653,7 +19653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1753612502}
   - component: {fileID: 1753612501}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20633,51 +20633,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22173,13 +22173,13 @@ GameObject:
   - component: {fileID: 2142955669}
   - component: {fileID: 2142955668}
   - component: {fileID: 2142955667}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Spheretic (9)
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2142955667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22291,7 +22291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143186965}
   - component: {fileID: 2143186964}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
