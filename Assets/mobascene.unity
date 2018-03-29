@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17293036, g: 0.21611634, b: 0.2980856, a: 1}
+  m_IndirectSpecularColor: {r: 0.17293012, g: 0.2161158, b: 0.29808462, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -854,7 +854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &102623025
 Transform:
   m_ObjectHideFlags: 0
@@ -5527,7 +5527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &722366285
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11601,6 +11601,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 988115718}
+  - component: {fileID: 988115719}
   m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -11621,6 +11622,19 @@ Transform:
   m_Father: {fileID: 75773259}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &988115719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 988115717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a912057830b04aa40b6296dad9fd91e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBullet: {fileID: 1947056823070710, guid: 818a4021990790844a5fb36c5399cbbf,
+    type: 2}
 --- !u!1 &993643303
 GameObject:
   m_ObjectHideFlags: 0
@@ -12371,6 +12385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLoc: {fileID: 2059073591}
+  bulletSpawn: {fileID: 1334928919}
 --- !u!95 &1092030526
 Animator:
   serializedVersion: 3
@@ -12592,7 +12607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1159513467
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14481,6 +14496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLoc: {fileID: 2059073591}
+  bulletSpawn: {fileID: 0}
 --- !u!1 &1311985452
 GameObject:
   m_ObjectHideFlags: 0
@@ -14646,6 +14662,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1334928918}
+  - component: {fileID: 1334928919}
   m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -14666,6 +14683,19 @@ Transform:
   m_Father: {fileID: 722366290}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1334928919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334928917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a912057830b04aa40b6296dad9fd91e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBullet: {fileID: 1947056823070710, guid: 818a4021990790844a5fb36c5399cbbf,
+    type: 2}
 --- !u!1 &1346876975
 GameObject:
   m_ObjectHideFlags: 0
@@ -14759,6 +14789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLoc: {fileID: 2059073591}
+  bulletSpawn: {fileID: 1357161099}
 --- !u!95 &1347159449
 Animator:
   serializedVersion: 3
@@ -14857,6 +14888,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1357161098}
+  - component: {fileID: 1357161099}
   m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -14877,6 +14909,19 @@ Transform:
   m_Father: {fileID: 1668337557}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1357161099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357161097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a912057830b04aa40b6296dad9fd91e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBullet: {fileID: 1947056823070710, guid: 818a4021990790844a5fb36c5399cbbf,
+    type: 2}
 --- !u!1 &1362930707
 GameObject:
   m_ObjectHideFlags: 0
@@ -15216,6 +15261,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1441460550}
+  - component: {fileID: 1441460551}
   m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -15236,6 +15282,19 @@ Transform:
   m_Father: {fileID: 1159513472}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441460551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1441460549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a912057830b04aa40b6296dad9fd91e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBullet: {fileID: 1947056823070710, guid: 818a4021990790844a5fb36c5399cbbf,
+    type: 2}
 --- !u!1 &1449466108
 GameObject:
   m_ObjectHideFlags: 0
@@ -15434,7 +15493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1469547655
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15630,6 +15689,42 @@ Prefab:
     - target: {fileID: 100014, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -67.22756
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.023881081
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.23315816
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 87.84471
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 400022, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98021
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -77.52839
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -10.067266
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 1e201cc0b032c5e428cb2e0aff2c390a, type: 3}
@@ -15829,6 +15924,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1489797757}
+  - component: {fileID: 1489797758}
   m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -15849,6 +15945,19 @@ Transform:
   m_Father: {fileID: 1469547660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1489797758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489797756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a912057830b04aa40b6296dad9fd91e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBullet: {fileID: 1947056823070710, guid: 818a4021990790844a5fb36c5399cbbf,
+    type: 2}
 --- !u!1 &1524112912
 GameObject:
   m_ObjectHideFlags: 0
@@ -16155,7 +16264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1559188205
 Transform:
   m_ObjectHideFlags: 0
@@ -16418,6 +16527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLoc: {fileID: 2059073591}
+  bulletSpawn: {fileID: 1441460551}
 --- !u!95 &1618530279
 Animator:
   serializedVersion: 3
@@ -16528,6 +16638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLoc: {fileID: 2059073591}
+  bulletSpawn: {fileID: 1489797758}
 --- !u!95 &1644932534
 Animator:
   serializedVersion: 3
@@ -16564,7 +16675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1668337552
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17995,6 +18106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLoc: {fileID: 2059073591}
+  bulletSpawn: {fileID: 988115719}
 --- !u!95 &1964598517
 Animator:
   serializedVersion: 3
@@ -18464,7 +18576,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2059073589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.244, z: 0}
+  m_LocalPosition: {x: 0, y: 0.244, z: -1.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1961830489}
@@ -18528,8 +18640,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1581178, z: 1}
-  m_Center: {x: 0, y: 0.60022426, z: 0}
+  m_Size: {x: 2.298592, y: 3.8584642, z: 1.9580457}
+  m_Center: {x: 0.11358523, y: 1.9503975, z: -0.031598687}
 --- !u!4 &2064921522 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 5af706e146f349c4daa2e851f0d7d9a3, type: 3}

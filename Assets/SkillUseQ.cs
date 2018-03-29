@@ -71,7 +71,7 @@ public class SkillUseQ : MonoBehaviour {
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000))
             {
-                desPos = new Vector3(hit.point.x, cubeManTransform.position.y, hit.point.z);
+                desPos = new Vector3(hit.point.x, cubeManTransform.position.y + 2f, hit.point.z);
             }
 
             activated = true;
