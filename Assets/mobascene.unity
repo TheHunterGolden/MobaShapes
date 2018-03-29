@@ -1104,6 +1104,7 @@ MonoBehaviour:
   back: 0
   lastingTime: 3
   speed: 30
+  rotateSpeed: 80
   distance: 20
   startTime: 0
   prefabAttackCude: {fileID: 1534709300741072, guid: 5a56429035ba950459434a4190b26f3d,
