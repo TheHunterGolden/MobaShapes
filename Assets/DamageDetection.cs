@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class DamageDetection : MonoBehaviour {
     public Animator enemyAnimator;
+    public Animator playerAnimator;
 
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.tag == "playerAttack")
+        if(collision.gameObject.tag == "playerAttack" || (collision.gameObject.name == "Sword" && playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack")))
         {
             GetComponent<SphereCollider>().enabled = false;
             GetComponent<CapsuleCollider>().enabled = false;
