@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23036218005908138}
   - component: {fileID: 54541326571832512}
   - component: {fileID: 114881474755799234}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bullet
   m_TagString: enemyAttack
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  speed: 60
+  speed: 40
   range: 80
   distance: 0
 --- !u!135 &135455417489118658
