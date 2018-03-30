@@ -25,6 +25,7 @@ public class BulletShoot : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        direction = Vector3.Reflect(direction, collision.contacts[0].normal).normalized;
+        if(collision.gameObject.tag != "square" && collision.gameObject.tag != "enemy")
+            direction = Vector3.Reflect(direction, collision.contacts[0].normal).normalized;
     }
 }
