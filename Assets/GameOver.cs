@@ -5,19 +5,20 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour {
-    public int highScore;
-    public int currentScore;
+    public float highScore;
+    public float currentScore;
     public Text highScoreText;
     public Text currentScoreText;
+    public Scorebar scoreBar;
 
 	// Use this for initialization
 	void Start () {
-        highScore = PlayerPrefs.GetInt("HighScore");
-        currentScore = 0;
+        highScore = PlayerPrefs.GetFloat("HighScore");
+        currentScore = scoreBar.score;
 
         if(currentScore > highScore)
         {
-            PlayerPrefs.SetInt("HighScore", currentScore);
+            PlayerPrefs.SetFloat("HighScore", currentScore);
             highScore = currentScore;
         }
 

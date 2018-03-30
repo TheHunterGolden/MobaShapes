@@ -30,7 +30,8 @@ public class WaveManager : MonoBehaviour {
     void SpawnEnemy() {
         for (int i = 0; i < spawnAmount; i++)
         {
-            Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
+         GameObject newEnemy = Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
+            newEnemy.SetActive(true);
         }
     }
 
