@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class DamageDetection : MonoBehaviour {
     public Animator enemyAnimator;
     public Animator playerAnimator;
+    public Text scorebar;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -17,6 +19,7 @@ public class DamageDetection : MonoBehaviour {
             GetComponent<Rigidbody>().isKinematic = true;
             GetComponent<NavMeshAgent>().speed = 0f;
             enemyAnimator.SetBool("Attacked", true);
+            scorebar.GetComponent<Scorebar>().addScore();
         }
     }
 }
