@@ -62,7 +62,7 @@ public class SkillUseR : MonoBehaviour {
                 attackCude[i].transform.localPosition = Vector3.MoveTowards(attackCude[i].transform.position, cubeManTransform.position, speed * Time.deltaTime);
                 relativeDistance[i] = attackCude[i].transform.position - cubeManTransform.position;
             }
-W
+
             if (Vector3.Equals(attackCude[0].transform.position, cubeManTransform.position))
             {
                 Destroy(attackCude[0]);
