@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Scorebar : MonoBehaviour {
 
     Text scoreboard;
-    private float score;
+    public float score;
 
 	void Start () {
         scoreboard = gameObject.GetComponent<Text>();
