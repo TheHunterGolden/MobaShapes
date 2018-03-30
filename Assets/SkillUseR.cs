@@ -56,12 +56,14 @@ public class SkillUseR : MonoBehaviour {
         }
         if (back)
         {
-            attackCude[0].transform.localPosition = Vector3.MoveTowards(attackCude[0].transform.localPosition, Vector3.zero, speed * Time.deltaTime);
-            attackCude[1].transform.localPosition = Vector3.MoveTowards(attackCude[1].transform.localPosition, Vector3.zero, speed * Time.deltaTime);
-            attackCude[2].transform.localPosition = Vector3.MoveTowards(attackCude[2].transform.localPosition, Vector3.zero, speed * Time.deltaTime);
-            attackCude[3].transform.localPosition = Vector3.MoveTowards(attackCude[3].transform.localPosition, Vector3.zero, speed * Time.deltaTime);
-
-            if (Vector3.Equals(attackCude[0].transform.localPosition, Vector3.zero))
+            for (int i = 0; i < attackCude.Length; i++)
+            {
+                attackCude[i].transform.position = cubeManTransform.position + relativeDistance[i];
+                attackCude[i].transform.localPosition = Vector3.MoveTowards(attackCude[i].transform.position, cubeManTransform.position, speed * Time.deltaTime);
+                relativeDistance[i] = attackCude[i].transform.position - cubeManTransform.position;
+            }
+W
+            if (Vector3.Equals(attackCude[0].transform.position, cubeManTransform.position))
             {
                 Destroy(attackCude[0]);
                 Destroy(attackCude[1]);
