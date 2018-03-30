@@ -21545,6 +21545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 375629649}
+  abilityE: {fileID: 427484899}
 --- !u!4 &2064921522 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 5af706e146f349c4daa2e851f0d7d9a3, type: 3}
