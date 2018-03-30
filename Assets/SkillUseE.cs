@@ -29,6 +29,7 @@ public class SkillUseE : MonoBehaviour
             if (Vector3.Equals(cubeManTransform.localPosition, desPos) || diff >= maxDistance)
             {
                 activated = false;
+                cubeManTransform.gameObject.tag = "square";
             }
         }
         
@@ -45,5 +46,6 @@ public class SkillUseE : MonoBehaviour
 
         startPos = cubeManTransform.localPosition;
         activated = true;
+        cubeManTransform.gameObject.tag = "playerAttack";
     }
 }
