@@ -20,7 +20,8 @@ public class EnemyAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        gameObject.transform.LookAt(playerLoc);
+        if (!_animator.GetBool("Attacked"))
+            gameObject.transform.LookAt(playerLoc);
 
         if (inRange == true)
         {

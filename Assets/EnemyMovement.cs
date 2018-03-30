@@ -9,8 +9,9 @@ public class EnemyMovement : MonoBehaviour {
     NavMeshAgent agent;
 
     public Transform playerLoc;
-   
 
+    public BulletSpawn bulletSpawn;
+   
     // Use this for initialization
     void Start () {
 

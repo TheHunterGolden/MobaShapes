@@ -8,6 +8,7 @@ public class SkillUseR : MonoBehaviour {
     public bool back;
     public float lastingTime;
     public float speed;
+    public float rotateSpeed;
     public float distance;
     public float startTime;
     public GameObject prefabAttackCude;
@@ -15,12 +16,28 @@ public class SkillUseR : MonoBehaviour {
     public GameObject[] attackCude;
     public GameObject qCdTimer;
     public SkillUseQ qSkill;
+    public Quaternion rotation;
+    public Vector3[] relativeDistance;
 
     void Start()
     {
         activated = false;
         back = false;
         attackCude = new GameObject[4];
+        relativeDistance = new Vector3[4];
+    }
+
+    void LateUpdate()
+    {
+        if (activated)
+        {
+            for (int i = 0; i < attackCude.Length; i++)
+            {
+                attackCude[i].transform.position = cubeManTransform.position + relativeDistance[i];
+                attackCude[i].transform.RotateAround(cubeManTransform.position, Vector3.up, rotateSpeed * Time.deltaTime);
+                relativeDistance[i] = attackCude[i].transform.position - cubeManTransform.position;
+            }
+        }
     }
 
     void Update()
@@ -60,15 +77,21 @@ public class SkillUseR : MonoBehaviour {
     {
         if (!activated)
         {
-            attackCude[0] = Instantiate(prefabAttackCude, cubeManTransform);
-            attackCude[1] = Instantiate(prefabAttackCude, cubeManTransform);
-            attackCude[2] = Instantiate(prefabAttackCude, cubeManTransform);
-            attackCude[3] = Instantiate(prefabAttackCude, cubeManTransform);
+            for (int i = 0; i < attackCude.Length; i++)
+            {
+                attackCude[i] = Instantiate(prefabAttackCude, cubeManTransform);
+                attackCude[i].transform.parent = null;
+            }
 
-            attackCude[0].transform.localPosition += new Vector3(distance, 0, distance);
-            attackCude[1].transform.localPosition += new Vector3(distance, 0, -distance);
-            attackCude[2].transform.localPosition += new Vector3(-distance, 0, distance);
-            attackCude[3].transform.localPosition += new Vector3(-distance, 0, -distance);
+            attackCude[0].transform.position = new Vector3(cubeManTransform.position.x + distance, 2f, cubeManTransform.position.z);
+            attackCude[1].transform.position = new Vector3(cubeManTransform.position.x - distance, 2f, cubeManTransform.position.z);
+            attackCude[2].transform.position = new Vector3(cubeManTransform.position.x, 2f, cubeManTransform.position.z + distance);
+            attackCude[3].transform.position = new Vector3(cubeManTransform.position.x, 2f, cubeManTransform.position.z - distance);
+
+            for (int i = 0; i < attackCude.Length; i++)
+            {
+                relativeDistance[i] = attackCude[i].transform.position - cubeManTransform.position;
+            }
 
             startTime = Time.time;
 
