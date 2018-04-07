@@ -21,6 +21,8 @@ public class WasdMovement : MonoBehaviour
 
     public SkillUseE ESkill;
 
+    public bool enableSwordAttack;
+
 
     // Use this for initialization
     void Start()
@@ -31,6 +33,7 @@ public class WasdMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         InvokeRepeating("FindVelocity", 0, 0.1f);
 
+        enableSwordAttack = true;
     }
 
     // Update is called once per frame
@@ -47,7 +50,7 @@ public class WasdMovement : MonoBehaviour
         {
             return;
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && enableSwordAttack)
         {
             
             _animator.SetBool("Attacking", true);
