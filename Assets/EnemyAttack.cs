@@ -33,7 +33,7 @@ public class EnemyAttack : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider col) {
-        if (col.gameObject.tag == "square")
+        if (col.gameObject.name == "SquarePerson")
         {
             agent.destination = gameObject.transform.position;
 
