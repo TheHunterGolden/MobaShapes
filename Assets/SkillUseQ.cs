@@ -19,6 +19,8 @@ public class SkillUseQ : MonoBehaviour {
     public GameObject qCdTimer;
     public GameObject rCdTimer;
     public SkillUseR rSkill;
+    public AudioSource source;
+    public AudioClip[] qSounds;
     
 	void Start () {
         activated = false;
@@ -73,11 +75,12 @@ public class SkillUseQ : MonoBehaviour {
             {
                 desPos = new Vector3(hit.point.x, cubeManTransform.position.y + 2f, hit.point.z);
             }
-
+            source.PlayOneShot(qSounds[Random.Range(0, qSounds.Length)]);
             activated = true;
         }
         else if (activated)
         {
+            source.PlayOneShot(qSounds[Random.Range(0, qSounds.Length)]);
             back = true;
             activated = false;
             float remainingTime = qCdTimer.GetComponent<CooldownTimer>().cooldown - (Time.time - startTime);
