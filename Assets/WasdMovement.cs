@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 
 public class WasdMovement : MonoBehaviour
 {
-
+    public AudioClip[] swordSounds;
+    public AudioSource source;
     private Animator _animator;
     NavMeshAgent agent;
     public float maxSpeed;
@@ -21,6 +23,8 @@ public class WasdMovement : MonoBehaviour
 
     public SkillUseE ESkill;
 
+    public bool enableSwordAttack;
+
 
     // Use this for initialization
     void Start()
@@ -31,6 +35,7 @@ public class WasdMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         InvokeRepeating("FindVelocity", 0, 0.1f);
 
+        enableSwordAttack = true;
     }
 
     // Update is called once per frame
@@ -47,10 +52,11 @@ public class WasdMovement : MonoBehaviour
         {
             return;
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && enableSwordAttack)
         {
             
             _animator.SetBool("Attacking", true);
+            source.PlayOneShot(swordSounds[Random.Range(0, swordSounds.Length)]);
             Debug.Log("Punching");
         }
         if (Input.GetMouseButtonUp(0)){
