@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyAttack : MonoBehaviour {
 
+    public AudioSource source;
+    public AudioClip[] attackSounds;
     NavMeshAgent agent;
     public Transform playerLoc;
     private Animator _animator;
@@ -52,10 +54,15 @@ public class EnemyAttack : MonoBehaviour {
 
     void Attack() {
         _animator.SetBool("Attacking", true);
+        
          
     }
 
     void chase() {
         agent.destination = playerLoc.position;
+    }
+
+    public void playAttackSound() {
+        source.PlayOneShot(attackSounds[Random.Range(0, attackSounds.Length)]);
     }
 }

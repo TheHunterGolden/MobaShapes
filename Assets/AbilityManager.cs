@@ -8,6 +8,7 @@ public class AbilityManager : MonoBehaviour {
 
     public GameObject[] abilities;
     public GameObject onCooldownFeedback;
+    
     void Start() {
         
     }

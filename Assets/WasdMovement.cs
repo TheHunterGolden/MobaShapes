@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 
 public class WasdMovement : MonoBehaviour
 {
-
+    public AudioClip[] swordSounds;
+    public AudioSource source;
     private Animator _animator;
     NavMeshAgent agent;
     public float maxSpeed;
@@ -54,6 +56,7 @@ public class WasdMovement : MonoBehaviour
         {
             
             _animator.SetBool("Attacking", true);
+            source.PlayOneShot(swordSounds[Random.Range(0, swordSounds.Length)]);
             Debug.Log("Punching");
         }
         if (Input.GetMouseButtonUp(0)){
