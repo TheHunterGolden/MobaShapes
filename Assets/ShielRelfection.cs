@@ -17,9 +17,8 @@ public class ShielRelfection : MonoBehaviour {
         if(collision.gameObject.tag == "enemyAttack")
         {
             collision.gameObject.tag = "playerAttack";
-            source.PlayOneShot(blockSounds);
-            
             blocked = true;
+            source.PlayOneShot(blockSounds);
         }
     }
 }

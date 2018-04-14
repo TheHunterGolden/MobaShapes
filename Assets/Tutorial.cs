@@ -42,12 +42,15 @@ public class Tutorial : MonoBehaviour {
         abilitySpace1 = "Use Space to block the attack";
         abilitySpace2 = "Use Reflected attack to kill the enemy";
         abilityE = "Use E to dash and kill the enemy";
-        abilityR1 = "Use R to kill the enemy";
-        abilityR2 = "Use Q to pull back the attack cube";
+        //abilityR1 = "Use R to kill the enemy";
+        //abilityR2 = "Use Q to pull back the attack cube";
+
+        abilityR1 = "Use R then press Q in 3 seconds to see the effect";
 
         //abilityManager.enabled = false;
         scoreBar.SetActive(false);
-        movement.enableSwordAttack = false;
+        movement.enableSwordAttack = true;
+        waveManager.enabled = false;
 
         for (int i = 0; i < cd.Length; i++)
         {
@@ -86,11 +89,11 @@ public class Tutorial : MonoBehaviour {
             case 8: tutorial.text = abilityR1;
                 AbilityR1Check();
                 break;
-            case 9:
+            /*case 9:
                 tutorial.text = abilityR2;
                 AbilityR2Check();
-                break;
-            case 10: waveManager.enabled = true;
+                break;*/
+            case 9: waveManager.enabled = true;
                 movement.enableSwordAttack = true;
 
                 for(int i = 0; i < cd.Length; i++)
@@ -186,27 +189,33 @@ public class Tutorial : MonoBehaviour {
     {
         if (enemyAnimator[3].GetBool("Attacked"))
         {
-            harmlessEnemy[4].SetActive(true);
+            //harmlessEnemy[4].SetActive(true);
             cd[2].canUse = false;
             cd[3].canUse = true;
+            cd[0].canUse = true;
             order++;
         }
     }
 
     public void AbilityR1Check()
     {
-        if (enemyAnimator[4].GetBool("Attacked"))
+        /*if (enemyAnimator[4].GetBool("Attacked"))
         {
             order++;
             cd[0].canUse = true;
-        }
-    }
+        }*/
 
-    public void AbilityR2Check()
-    {
         if (abilityR.back)
         {
             order++;
         }
     }
+
+    /*public void AbilityR2Check()
+    {
+        if (abilityR.back)
+        {
+            order++;
+        }
+    }*/
 }
