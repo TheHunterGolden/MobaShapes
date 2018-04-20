@@ -7,7 +7,7 @@ public class WaveManager : MonoBehaviour {
     public GameObject enemy;
     public Transform[] spawnPoints;
     public float spawnTimer;
-    public int spawnAmount;
+    public float spawnAmount;
     private float startTime;
     //keep at 1 to not affect anything
     public float scalingFactor;
@@ -24,11 +24,11 @@ public class WaveManager : MonoBehaviour {
             SpawnEnemy();
             ResetTimer();
         }
-        startTime = startTime * scalingFactor;
+      
     }
 
     void SpawnEnemy() {
-        for (int i = 0; i < spawnAmount; i++)
+        for (int i = 0; i < Mathf.Round(spawnAmount); i++)
         {
          GameObject newEnemy = Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
             newEnemy.SetActive(true);
@@ -36,6 +36,10 @@ public class WaveManager : MonoBehaviour {
     }
 
     void ResetTimer() {
-        spawnTimer = startTime;
+        float newTimer = (startTime -= scalingFactor);
+
+        spawnTimer = newTimer;
+        spawnAmount += 0.05f;
+
     }
 }

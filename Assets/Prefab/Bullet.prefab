@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  speed: 30
+  speed: 15
   range: 80
   distance: 0
 --- !u!135 &135455417489118658
