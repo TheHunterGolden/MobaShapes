@@ -9,7 +9,7 @@ public class SkipTutorial : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Time.timeScale = 0;
-        
+        Cursor.visible = true;
 	}
 
     public void Yes()
