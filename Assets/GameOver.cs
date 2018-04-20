@@ -24,6 +24,8 @@ public class GameOver : MonoBehaviour {
 
         currentScoreText.text = currentScore.ToString();
         highScoreText.text = highScore.ToString();
+
+        Cursor.visible = true;
     }
 	
     public void Restart()
