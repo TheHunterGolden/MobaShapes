@@ -75,6 +75,9 @@ public class SkillUseQ : MonoBehaviour {
             {
                 desPos = new Vector3(hit.point.x, cubeManTransform.position.y + 2f, hit.point.z);
             }
+
+            //desPos = maxDistance * desPos.normalized;
+            //desPos.y = 0.487f;
             source.PlayOneShot(qSounds[Random.Range(0, qSounds.Length)]);
             activated = true;
         }
