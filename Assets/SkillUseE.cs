@@ -49,6 +49,10 @@ public class SkillUseE : MonoBehaviour
             desPos = new Vector3(hit.point.x, cubeManTransform.position.y, hit.point.z);
         }
 
+        desPos = desPos - cubeManTransform.position;
+        desPos = maxDistance * desPos.normalized;
+        desPos.y = cubeManTransform.position.y;
+
         startPos = cubeManTransform.localPosition;
         activated = true;
         ParticleSystem.EmissionModule em= trailEffect.emission;

@@ -73,11 +73,13 @@ public class SkillUseQ : MonoBehaviour {
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000))
             {
-                desPos = new Vector3(hit.point.x, cubeManTransform.position.y + 2f, hit.point.z);
+                desPos = new Vector3(hit.point.x, cubeManTransform.position.y, hit.point.z);
             }
 
-            //desPos = maxDistance * desPos.normalized;
-            //desPos.y = 0.487f;
+            desPos = desPos - cubeManTransform.position;
+            desPos = maxDistance * desPos.normalized;
+            desPos.y = cubeManTransform.position.y + 2f;
+
             source.PlayOneShot(qSounds[Random.Range(0, qSounds.Length)]);
             activated = true;
         }
