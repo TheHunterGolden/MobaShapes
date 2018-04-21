@@ -10,11 +10,14 @@ public class SkillUseE : MonoBehaviour
     public Vector3 desPos;
     public Vector3 startPos;
     public Transform cubeManTransform;
+    public ParticleSystem trailEffect;
 
     // Use this for initialization
     void Start()
     {
         activated = false;
+        ParticleSystem.EmissionModule em = trailEffect.emission;
+        em.enabled = false;
     }
 
     // Update is called once per frame
@@ -29,6 +32,8 @@ public class SkillUseE : MonoBehaviour
             if (Vector3.Equals(cubeManTransform.localPosition, desPos) || diff >= maxDistance)
             {
                 activated = false;
+                ParticleSystem.EmissionModule em = trailEffect.emission;
+                em.enabled = false;
                 cubeManTransform.gameObject.tag = "square";
             }
         }
@@ -46,6 +51,8 @@ public class SkillUseE : MonoBehaviour
 
         startPos = cubeManTransform.localPosition;
         activated = true;
+        ParticleSystem.EmissionModule em= trailEffect.emission;
+        em.enabled = true;
         cubeManTransform.gameObject.tag = "playerAttack";
     }
 }
