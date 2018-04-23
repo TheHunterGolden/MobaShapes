@@ -50,7 +50,7 @@ public class SkillUseE : MonoBehaviour
         }
 
         desPos = desPos - cubeManTransform.position;
-        desPos = maxDistance * desPos.normalized;
+        desPos = cubeManTransform.localPosition + maxDistance * desPos.normalized;
         desPos.y = cubeManTransform.position.y;
 
         startPos = cubeManTransform.localPosition;
