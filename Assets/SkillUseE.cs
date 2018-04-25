@@ -9,6 +9,7 @@ public class SkillUseE : MonoBehaviour
     public float maxDistance;
     public Vector3 desPos;
     public Vector3 startPos;
+    public Vector3 lastPos;
     public Transform cubeManTransform;
     public ParticleSystem trailEffect;
 
@@ -28,14 +29,18 @@ public class SkillUseE : MonoBehaviour
             float diff = Vector3.Distance(startPos, cubeManTransform.localPosition);
 
             cubeManTransform.localPosition = Vector3.MoveTowards(cubeManTransform.localPosition, desPos, speed * Time.deltaTime);
-            
-            if (Vector3.Equals(cubeManTransform.localPosition, desPos) || diff >= maxDistance)
+
+            float diff2 = Vector3.Distance(lastPos, cubeManTransform.localPosition);
+
+            if (Vector3.Equals(cubeManTransform.localPosition, desPos) || diff >= maxDistance || diff2 < 0.1f)
             {
                 activated = false;
                 ParticleSystem.EmissionModule em = trailEffect.emission;
                 em.enabled = false;
                 cubeManTransform.gameObject.tag = "square";
             }
+
+            lastPos = cubeManTransform.localPosition;
         }
         
     }

@@ -46,7 +46,7 @@ public class SkillUseR : MonoBehaviour {
         {
             if (Time.time - startTime > lastingTime)
             {
-                for (int i = 0; i < attackCude.Length; i++)
+                /*for (int i = 0; i < attackCude.Length; i++)
                 {
                     attackCude[i].GetComponent<MeshRenderer>().enabled = false;
                     attackCude[i].GetComponent<BoxCollider>().enabled = false;
@@ -55,7 +55,8 @@ public class SkillUseR : MonoBehaviour {
                 }
 
                 activated = false;
-                qSkill.isR = false;
+                qSkill.isR = false;*/
+                back = true;
             }
         }
         if (back)
