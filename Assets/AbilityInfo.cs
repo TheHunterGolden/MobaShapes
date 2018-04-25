@@ -8,17 +8,17 @@ public class AbilityInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     GameObject child;
 
     void Start() {
-        child = gameObject.transform.GetChild(0).gameObject;
+        //child = gameObject.transform.GetChild(0).gameObject;
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        child.SetActive(true);
+        //child.SetActive(true);
 
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        child.SetActive(false);
+        //child.SetActive(false);
         
     }
 }

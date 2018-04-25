@@ -35,7 +35,7 @@ public class Tutorial : MonoBehaviour {
         order = 0;
 
         move = "Use WASD to move and Mouse to aim";
-        abilityInfo = "Hover over the ability icon to read the abilityInfo";
+        //abilityInfo = "Hover over the ability icon to read the abilityInfo";
         swordAttck = "LeftClick to use swordAttack to kill the enemy!";
         abilityQ1 = "Use Q to kill the enemy";
         abilityQ2 = "Use Q to pull back the attack cube";
@@ -65,7 +65,7 @@ public class Tutorial : MonoBehaviour {
             case 0: tutorial.text = move;
                 MoveCheck();
                 break;
-            case 1: tutorial.text = abilityInfo;
+            case 1: tutorial.text = swordAttck;
                 AbilityInfoCheck();
                 break;
             case 2: tutorial.text = swordAttck;
@@ -122,14 +122,16 @@ public class Tutorial : MonoBehaviour {
 
     public void AbilityInfoCheck()
     {
-        for (int i = 0; i < abilityInfos.Length; i++)
+        /*for (int i = 0; i < abilityInfos.Length; i++)
         {
             if (abilityInfos[i].activeSelf)
             {
                 harmlessEnemy[0].SetActive(true);
                 order++;
             }
-        }
+        }*/
+        harmlessEnemy[0].SetActive(true);
+        order++;
     }
 
     public void SwordAttackCheck()
