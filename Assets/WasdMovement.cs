@@ -24,6 +24,7 @@ public class WasdMovement : MonoBehaviour
     public SkillUseE ESkill;
 
     public bool enableSwordAttack;
+    public BoxCollider[] swordCudes;
 
 
     // Use this for initialization
@@ -54,7 +55,6 @@ public class WasdMovement : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && enableSwordAttack)
         {
-            
             _animator.SetBool("Attacking", true);
             source.PlayOneShot(swordSounds[Random.Range(0, swordSounds.Length)]);
             Debug.Log("Punching");
@@ -62,6 +62,7 @@ public class WasdMovement : MonoBehaviour
         if (Input.GetMouseButtonUp(0)){
             _animator.SetBool("Attacking", false);
         }
+
         //code to turn player towards mouse
         RaycastHit hit1;
 

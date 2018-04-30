@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkipTutorial : MonoBehaviour {
     public GameObject tutorial;
     public GameObject target;
+    public GameObject bonus;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,7 @@ public class SkipTutorial : MonoBehaviour {
     {
         target.SetActive(true);
         Time.timeScale = 1;
+        bonus.SetActive(true);
         gameObject.SetActive(false);
     }
 
