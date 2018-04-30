@@ -47,7 +47,7 @@ public class BonusSystem : MonoBehaviour {
                 instr.text = "Relfected attack bonus! " + remainingTime + "s";
                 break;
             case 3:
-                instr.text = "Dash attck bonus! " + remainingTime + "s";
+                instr.text = "Dash attack bonus! " + remainingTime + "s";
                 break;
             case 4:
                 remainingTime = "-1";
