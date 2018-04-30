@@ -28,6 +28,7 @@ public class Tutorial : MonoBehaviour {
     public SkillUseQ abilityQ;
     public SkillUseR abilityR;
     public PlayerDamageDetection playerDamageDetection;
+    public GameObject bonus;
 
     // Use this for initialization
     void Start () {
@@ -104,6 +105,7 @@ public class Tutorial : MonoBehaviour {
                 playerDamageDetection.isTutorial = false;
                 scoreBar.SetActive(true);
                 scoreBar.GetComponent<Scorebar>().score = 0;
+                bonus.SetActive(true);
                 gameObject.SetActive(false);
                 break;
         }

@@ -55,25 +55,12 @@ public class WasdMovement : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && enableSwordAttack)
         {
-            for (int i = 0; i < swordCudes.Length; i++)
-            {
-                swordCudes[i].isTrigger = false;
-            }
-
             _animator.SetBool("Attacking", true);
             source.PlayOneShot(swordSounds[Random.Range(0, swordSounds.Length)]);
             Debug.Log("Punching");
         }
         if (Input.GetMouseButtonUp(0)){
             _animator.SetBool("Attacking", false);
-        }
-
-        if(!swordCudes[0].isTrigger && _animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-        {
-            for (int i = 0; i < swordCudes.Length; i++)
-            {
-                swordCudes[i].isTrigger = true;
-            }
         }
 
         //code to turn player towards mouse
