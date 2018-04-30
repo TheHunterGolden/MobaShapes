@@ -10849,7 +10849,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 10
   m_Text: 
 --- !u!222 &472362106
 CanvasRenderer:
@@ -11013,7 +11013,19 @@ Prefab:
       objectReference: {fileID: 1504925651}
     - target: {fileID: 1301781855610530, guid: cc7c66acf0ce7224c81f4cf264445305, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261916107798618, guid: cc7c66acf0ce7224c81f4cf264445305, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261916107798618, guid: cc7c66acf0ce7224c81f4cf264445305, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261916107798618, guid: cc7c66acf0ce7224c81f4cf264445305, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 108
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc7c66acf0ce7224c81f4cf264445305, type: 2}
@@ -17377,7 +17389,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1452154419
+  randomSeed: 1958541926
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -36034,27 +36046,27 @@ Prefab:
     - target: {fileID: 2300000, guid: 5af706e146f349c4daa2e851f0d7d9a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b108f4e00cec9b94d8de8fbadf948f25, type: 2}
+      objectReference: {fileID: 2100000, guid: ed204deabc6244a44adc8abcae09b1fe, type: 2}
     - target: {fileID: 2300002, guid: 5af706e146f349c4daa2e851f0d7d9a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b108f4e00cec9b94d8de8fbadf948f25, type: 2}
+      objectReference: {fileID: 2100000, guid: ed204deabc6244a44adc8abcae09b1fe, type: 2}
     - target: {fileID: 2300006, guid: 5af706e146f349c4daa2e851f0d7d9a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b108f4e00cec9b94d8de8fbadf948f25, type: 2}
+      objectReference: {fileID: 2100000, guid: ed204deabc6244a44adc8abcae09b1fe, type: 2}
     - target: {fileID: 2300004, guid: 5af706e146f349c4daa2e851f0d7d9a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b108f4e00cec9b94d8de8fbadf948f25, type: 2}
+      objectReference: {fileID: 2100000, guid: ed204deabc6244a44adc8abcae09b1fe, type: 2}
     - target: {fileID: 2300008, guid: 5af706e146f349c4daa2e851f0d7d9a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b108f4e00cec9b94d8de8fbadf948f25, type: 2}
+      objectReference: {fileID: 2100000, guid: ed204deabc6244a44adc8abcae09b1fe, type: 2}
     - target: {fileID: 2300010, guid: 5af706e146f349c4daa2e851f0d7d9a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b108f4e00cec9b94d8de8fbadf948f25, type: 2}
+      objectReference: {fileID: 2100000, guid: ed204deabc6244a44adc8abcae09b1fe, type: 2}
     - target: {fileID: 100022, guid: 5af706e146f349c4daa2e851f0d7d9a3, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -36811,7 +36823,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: aab9464ae6d463741880d9035a38f6f9, type: 2}
+  - {fileID: 2100000, guid: 6a731d1e9f500ac47a6cd6b1d0fb0640, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -41873,8 +41885,8 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: ed204deabc6244a44adc8abcae09b1fe, type: 2}
+  - {fileID: 2100000, guid: ed204deabc6244a44adc8abcae09b1fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -41972,7 +41984,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1940882411
+  randomSeed: -350240754
   InitialModule:
     serializedVersion: 3
     enabled: 1
