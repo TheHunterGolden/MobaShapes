@@ -18,7 +18,7 @@ public class BonusSystem : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         startTime = Time.time;
-        currentBonus = Random.Range(4, 6);
+        currentBonus = Random.Range(0, 6);
         InstrChange();
         isNoKilling = false;
         chosenEnemy = null;
@@ -44,7 +44,7 @@ public class BonusSystem : MonoBehaviour {
                 instr.text = "Cube attack bonus! " + remainingTime + "s";
                 break;
             case 2:
-                instr.text = "Relfected attack bonus! " + remainingTime + "s";
+                instr.text = "Reflected attack bonus! " + remainingTime + "s";
                 break;
             case 3:
                 instr.text = "Dash attack bonus! " + remainingTime + "s";
@@ -55,7 +55,7 @@ public class BonusSystem : MonoBehaviour {
                 if (!isNoKilling)
                 {
                     isNoKilling = true;
-                    InvokeRepeating("NoKillingBonus", lastingTime / 3 + 4.5F, 4.999F);
+                    InvokeRepeating("NoKillingBonus", lastingTime / 3 + 4.4F, 5F);
                 }
                     
                 if ((lastingTime / 3 - Time.time + startTime) > 0)
@@ -161,7 +161,7 @@ public class BonusSystem : MonoBehaviour {
         startTime = Time.time;
         int lastBonus = currentBonus;
         while (currentBonus == lastBonus)
-            currentBonus = Random.Range(4, 6);
+            currentBonus = Random.Range(0, 6);
     }
 
     public void BonusCheck(int deathType)
