@@ -33,19 +33,20 @@ public class SkillUseQ : MonoBehaviour {
         {
             float diff = Vector3.Distance(startPos, attackCude.transform.localPosition);
 
-            if (diff < maxDistance && attackCude.transform.localPosition.x > -96f && attackCude.transform.localPosition.x < 96f && attackCude.transform.localPosition.z > -199f && attackCude.transform.localPosition.z < 199f)
+            if (diff < maxDistance)
             {
                 attackCude.transform.localPosition = Vector3.MoveTowards(attackCude.transform.localPosition, desPos, speed * Time.deltaTime);
             }
 
             if(Time.time - startTime > lastingTime)
             {
-                Destroy(attackCude);
+                QUse();
+                /*Destroy(attackCude);
                 activated = false;
 
                 float remainingTime = qCdTimer.GetComponent<CooldownTimer>().cooldown - lastingTime;
                 qCdTimer.GetComponent<Text>().text = remainingTime.ToString();
-                qCdTimer.GetComponent<CooldownTimer>().canUse = false;
+                qCdTimer.GetComponent<CooldownTimer>().canUse = false;*/
             }
         }
         if (back)
@@ -54,7 +55,10 @@ public class SkillUseQ : MonoBehaviour {
 
             if (Vector3.Distance(cubeManTransform.localPosition, attackCude.transform.localPosition) == 0f)
             {
-                Destroy(attackCude);
+                attackCude.GetComponent<MeshRenderer>().enabled = false;
+                attackCude.GetComponent<BoxCollider>().enabled = false;
+                ParticleSystem.EmissionModule em = attackCude.GetComponent<ParticleSystem>().emission;
+                em.enabled = false;
                 back = false;
             }
         }
@@ -73,8 +77,13 @@ public class SkillUseQ : MonoBehaviour {
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000))
             {
-                desPos = new Vector3(hit.point.x, cubeManTransform.position.y + 2f, hit.point.z);
+                desPos = new Vector3(hit.point.x, cubeManTransform.position.y, hit.point.z);
             }
+
+            desPos = desPos - cubeManTransform.position;
+            desPos = cubeManTransform.localPosition + maxDistance * desPos.normalized;
+            desPos.y = cubeManTransform.position.y + 2f;
+
             source.PlayOneShot(qSounds[Random.Range(0, qSounds.Length)]);
             activated = true;
         }

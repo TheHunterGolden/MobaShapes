@@ -35,19 +35,22 @@ public class Tutorial : MonoBehaviour {
         order = 0;
 
         move = "Use WASD to move and Mouse to aim";
-        abilityInfo = "Hover over the ability icon to read the abilityInfo";
+        //abilityInfo = "Hover over the ability icon to read the abilityInfo";
         swordAttck = "LeftClick to use swordAttack to kill the enemy!";
         abilityQ1 = "Use Q to kill the enemy";
         abilityQ2 = "Use Q to pull back the attack cube";
         abilitySpace1 = "Use Space to block the attack";
         abilitySpace2 = "Use Reflected attack to kill the enemy";
         abilityE = "Use E to dash and kill the enemy";
-        abilityR1 = "Use R to kill the enemy";
-        abilityR2 = "Use Q to pull back the attack cube";
+        //abilityR1 = "Use R to kill the enemy";
+        //abilityR2 = "Use Q to pull back the attack cube";
+
+        abilityR1 = "Use R then press Q in 3 seconds to see the effect";
 
         //abilityManager.enabled = false;
         scoreBar.SetActive(false);
-        movement.enableSwordAttack = false;
+        movement.enableSwordAttack = true;
+        waveManager.enabled = false;
 
         for (int i = 0; i < cd.Length; i++)
         {
@@ -62,7 +65,7 @@ public class Tutorial : MonoBehaviour {
             case 0: tutorial.text = move;
                 MoveCheck();
                 break;
-            case 1: tutorial.text = abilityInfo;
+            case 1: tutorial.text = swordAttck;
                 AbilityInfoCheck();
                 break;
             case 2: tutorial.text = swordAttck;
@@ -86,11 +89,11 @@ public class Tutorial : MonoBehaviour {
             case 8: tutorial.text = abilityR1;
                 AbilityR1Check();
                 break;
-            case 9:
+            /*case 9:
                 tutorial.text = abilityR2;
                 AbilityR2Check();
-                break;
-            case 10: waveManager.enabled = true;
+                break;*/
+            case 9: waveManager.enabled = true;
                 movement.enableSwordAttack = true;
 
                 for(int i = 0; i < cd.Length; i++)
@@ -119,14 +122,16 @@ public class Tutorial : MonoBehaviour {
 
     public void AbilityInfoCheck()
     {
-        for (int i = 0; i < abilityInfos.Length; i++)
+        /*for (int i = 0; i < abilityInfos.Length; i++)
         {
             if (abilityInfos[i].activeSelf)
             {
                 harmlessEnemy[0].SetActive(true);
                 order++;
             }
-        }
+        }*/
+        harmlessEnemy[0].SetActive(true);
+        order++;
     }
 
     public void SwordAttackCheck()
@@ -186,27 +191,33 @@ public class Tutorial : MonoBehaviour {
     {
         if (enemyAnimator[3].GetBool("Attacked"))
         {
-            harmlessEnemy[4].SetActive(true);
+            //harmlessEnemy[4].SetActive(true);
             cd[2].canUse = false;
             cd[3].canUse = true;
+            cd[0].canUse = true;
             order++;
         }
     }
 
     public void AbilityR1Check()
     {
-        if (enemyAnimator[4].GetBool("Attacked"))
+        /*if (enemyAnimator[4].GetBool("Attacked"))
         {
             order++;
             cd[0].canUse = true;
-        }
-    }
+        }*/
 
-    public void AbilityR2Check()
-    {
         if (abilityR.back)
         {
             order++;
         }
     }
+
+    /*public void AbilityR2Check()
+    {
+        if (abilityR.back)
+        {
+            order++;
+        }
+    }*/
 }

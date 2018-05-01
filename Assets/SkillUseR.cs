@@ -46,12 +46,17 @@ public class SkillUseR : MonoBehaviour {
         {
             if (Time.time - startTime > lastingTime)
             {
-                Destroy(attackCude[0]);
-                Destroy(attackCude[1]);
-                Destroy(attackCude[2]);
-                Destroy(attackCude[3]);
+                /*for (int i = 0; i < attackCude.Length; i++)
+                {
+                    attackCude[i].GetComponent<MeshRenderer>().enabled = false;
+                    attackCude[i].GetComponent<BoxCollider>().enabled = false;
+                    ParticleSystem.EmissionModule em = attackCude[i].GetComponent<ParticleSystem>().emission;
+                    em.enabled = false;
+                }
+
                 activated = false;
-                qSkill.isR = false;
+                qSkill.isR = false;*/
+                back = true;
             }
         }
         if (back)
@@ -65,10 +70,14 @@ public class SkillUseR : MonoBehaviour {
 
             if (Vector3.Equals(attackCude[0].transform.position, cubeManTransform.position))
             {
-                Destroy(attackCude[0]);
-                Destroy(attackCude[1]);
-                Destroy(attackCude[2]);
-                Destroy(attackCude[3]);
+                for (int i = 0; i < attackCude.Length; i++)
+                {
+                    attackCude[i].GetComponent<MeshRenderer>().enabled = false;
+                    attackCude[i].GetComponent<BoxCollider>().enabled = false;
+                    ParticleSystem.EmissionModule em = attackCude[i].GetComponent<ParticleSystem>().emission;
+                    em.enabled = false;
+                }
+
                 back = false;
                 activated = false;
             }

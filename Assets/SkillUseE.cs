@@ -9,12 +9,16 @@ public class SkillUseE : MonoBehaviour
     public float maxDistance;
     public Vector3 desPos;
     public Vector3 startPos;
+    public Vector3 lastPos;
     public Transform cubeManTransform;
+    public ParticleSystem trailEffect;
 
     // Use this for initialization
     void Start()
     {
         activated = false;
+        ParticleSystem.EmissionModule em = trailEffect.emission;
+        em.enabled = false;
     }
 
     // Update is called once per frame
@@ -25,12 +29,18 @@ public class SkillUseE : MonoBehaviour
             float diff = Vector3.Distance(startPos, cubeManTransform.localPosition);
 
             cubeManTransform.localPosition = Vector3.MoveTowards(cubeManTransform.localPosition, desPos, speed * Time.deltaTime);
-            
-            if (Vector3.Equals(cubeManTransform.localPosition, desPos) || diff >= maxDistance)
+
+            float diff2 = Vector3.Distance(lastPos, cubeManTransform.localPosition);
+
+            if (Vector3.Equals(cubeManTransform.localPosition, desPos) || diff >= maxDistance || diff2 < 0.1f)
             {
                 activated = false;
+                ParticleSystem.EmissionModule em = trailEffect.emission;
+                em.enabled = false;
                 cubeManTransform.gameObject.tag = "square";
             }
+
+            lastPos = cubeManTransform.localPosition;
         }
         
     }
@@ -44,8 +54,14 @@ public class SkillUseE : MonoBehaviour
             desPos = new Vector3(hit.point.x, cubeManTransform.position.y, hit.point.z);
         }
 
+        desPos = desPos - cubeManTransform.position;
+        desPos = cubeManTransform.localPosition + maxDistance * desPos.normalized;
+        desPos.y = cubeManTransform.position.y;
+
         startPos = cubeManTransform.localPosition;
         activated = true;
+        ParticleSystem.EmissionModule em= trailEffect.emission;
+        em.enabled = true;
         cubeManTransform.gameObject.tag = "playerAttack";
     }
 }
