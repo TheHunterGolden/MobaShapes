@@ -17,6 +17,7 @@ public class ShielRelfection : MonoBehaviour {
         if(collision.gameObject.tag == "enemyAttack")
         {
             collision.gameObject.tag = "playerAttack";
+            collision.gameObject.GetComponent<Renderer>().material.color = Color.white;
             blocked = true;
             source.PlayOneShot(blockSounds);
         }

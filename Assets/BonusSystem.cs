@@ -32,7 +32,7 @@ public class BonusSystem : MonoBehaviour {
 
     public void InstrChange()
     {
-        string remainingTime = (lastingTime - Time.time + startTime).ToString("00");
+        string remainingTime = (lastingTime - Time.time + startTime).ToString("0");
 
         switch (currentBonus)
         {
@@ -40,29 +40,29 @@ public class BonusSystem : MonoBehaviour {
                 instr.text = "Sword attack bonus! " + remainingTime + "s";
                 break;
             case 1:
-                remainingTime = (lastingTime * 2 / 3 - Time.time + startTime).ToString("00");
+                remainingTime = (lastingTime * 2 / 3 - Time.time + startTime).ToString("0");
                 instr.text = "Cube attack bonus! " + remainingTime + "s";
                 break;
             case 2:
-                instr.text = "Relfected attack bonus! " + remainingTime + "s";
+                instr.text = "Reflected attack bonus! " + remainingTime + "s";
                 break;
             case 3:
                 instr.text = "Dash attack bonus! " + remainingTime + "s";
                 break;
             case 4:
                 remainingTime = "-1";
-                string waitingTime = (lastingTime / 3 - Time.time + startTime).ToString("00");
+                string waitingTime = (lastingTime / 3 - Time.time + startTime).ToString("0");
                 if (!isNoKilling)
                 {
                     isNoKilling = true;
-                    InvokeRepeating("NoKillingBonus", lastingTime / 3 + 5F, 5F);
+                    InvokeRepeating("NoKillingBonus", lastingTime / 3 + 4.4F, 5F);
                 }
                     
                 if ((lastingTime / 3 - Time.time + startTime) > 0)
                     instr.text = "No killing bonus! Start after " + waitingTime + "s...";
                 else
                 {
-                    remainingTime = (lastingTime / 3 - Time.time + startTime + lastingTime * 2).ToString("00");
+                    remainingTime = (lastingTime / 3 - Time.time + startTime + lastingTime).ToString("0");
                     instr.text = "No killing bonus every 5 seconds! " + remainingTime +"s";
                 }
                 
@@ -96,21 +96,30 @@ public class BonusSystem : MonoBehaviour {
 
                         for (int i = 0; i < chosenEnemy.Length; i++)
                         {
-                            Debug.Log("i: " + i + " number: " + chosenEnemy[i]);
                             Instantiate(prefabArrow, enemies[chosenEnemy[i]].transform);
                         }
                     }
 
-                    if (GameObject.FindGameObjectsWithTag("arrow").Length == 0)
+                    bool allCleared = true;
+                    GameObject[] pointedEnemies = GameObject.FindGameObjectsWithTag("arrow");
+                    for (int i = 0; i < pointedEnemies.Length; i++)
                     {
-                        Debug.Log("happen");
+                        Animator aniEnemy = pointedEnemies[i].transform.parent.GetComponentInChildren<Animator>();
+                        if(!aniEnemy.GetBool("Attacked")){
+                            allCleared = false;
+                            break;
+                        }
+                    }
+
+                    if (allCleared)
+                    {
                         scoreBar.score += chosenEnemy.Length * 4;
                         BonusChange();
                         chosenEnemy = null;
                     }
                     else
                     {
-                        remainingTime = ((lastingTime / 5) * chosenEnemy.Length - Time.time + startTime).ToString("00");
+                        remainingTime = (lastingTime - Time.time + startTime).ToString("0");
                         instr.text = "Eliminate pointed enemies! " + remainingTime + "s";
                     }
                 }
@@ -120,6 +129,12 @@ public class BonusSystem : MonoBehaviour {
 
         if (int.Parse(remainingTime) == 0 && (currentBonus != 4 || isNoKilling))
         {
+            if(currentBonus == 4)
+            {
+                isNoKilling = false;
+                CancelInvoke();
+            }
+
             if(currentBonus == 5)
             {
                 GameObject[] arrows = GameObject.FindGameObjectsWithTag("arrow");
@@ -135,7 +150,7 @@ public class BonusSystem : MonoBehaviour {
 
     public void NoKillingBonus()
     {
-        if (enemies.Length / 3 == 0)
+        if (enemies.Length / 2 == 0 || enemies.Length / 2 == 1)
             scoreBar.score += 1f;
         else
             scoreBar.score += enemies.Length / 2;

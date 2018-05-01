@@ -92,8 +92,11 @@ public class SkillUseQ : MonoBehaviour {
             source.PlayOneShot(qSounds[Random.Range(0, qSounds.Length)]);
             back = true;
             activated = false;
-            float remainingTime = qCdTimer.GetComponent<CooldownTimer>().cooldown - (Time.time - startTime);
-            qCdTimer.GetComponent<Text>().text = remainingTime.ToString();
+            //float remainingTime = (Time.time - startTime) / qCdTimer.GetComponent<CooldownTimer>().cooldown;
+            //qCdTimer.GetComponent<Text>().text = remainingTime.ToString();
+            //qCdTimer.GetComponent<RectTransform>().anchorMin = new Vector2(0f, remainingTime);
+            qCdTimer.GetComponent<CooldownTimer>().startTime = startTime;
+            qCdTimer.GetComponent<Image>().enabled = true;
             qCdTimer.GetComponent<CooldownTimer>().canUse = false;
         }
 
