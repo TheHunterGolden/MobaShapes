@@ -19,7 +19,7 @@ public class WaveManager : MonoBehaviour {
     void Start () {
         count = 0;
         startTime = spawnTimer;
-        
+        spawnTimer = 0;
     }
 	
 	
