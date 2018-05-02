@@ -161,7 +161,7 @@ public class BonusSystem : MonoBehaviour {
         startTime = Time.time;
         int lastBonus = currentBonus;
         while (currentBonus == lastBonus)
-            currentBonus = Random.Range(0, 6);
+            currentBonus = Random.Range(4, 6);
     }
 
     public void BonusCheck(int deathType)

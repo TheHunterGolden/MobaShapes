@@ -57604,7 +57604,7 @@ MonoBehaviour:
   lastingTime: 15
   isNoKilling: 0
   chosenEnemy: 
-  prefabArrow: {fileID: 1916842847498610, guid: acc260a2edf975749a08d1f46bcbc902,
+  prefabArrow: {fileID: 1575715065156806, guid: 9572627cc8af5114f81ae425916bf334,
     type: 2}
 --- !u!1 &1948512896
 GameObject:
